@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1619485433 source:c:\users\seba\documents\aled\my library\main.c
+	<stdio.h>
+	<ctype.h>
+	"functions.h"
+
+1619491248 source:c:\users\seba\documents\aled\my library\validate.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validate.h"
+
+1619491790 c:\users\seba\documents\aled\my library\validate.h
+
+1619491767 source:c:\users\seba\documents\aled\my library\functions.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+	"validate.h"
+
+1619491773 c:\users\seba\documents\aled\my library\functions.h
+	"validate.h"
+
