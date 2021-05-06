@@ -11,3 +11,4 @@ int f_option_6();
 int f_option_7();
 int f_option_8();
 int f_option_9();
+void clearScreen();

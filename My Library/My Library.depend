@@ -4,20 +4,21 @@
 	<ctype.h>
 	"functions.h"
 
-1619491248 source:c:\users\seba\documents\aled\my library\validate.c
+1620088068 source:c:\users\seba\documents\aled\my library\validate.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	<ctype.h>
 	"validate.h"
 
-1619491790 c:\users\seba\documents\aled\my library\validate.h
+1620087859 c:\users\seba\documents\aled\my library\validate.h
 
-1619491837 source:c:\users\seba\documents\aled\my library\functions.c
+1620087444 source:c:\users\seba\documents\aled\my library\functions.c
 	<stdio.h>
 	<stdlib.h>
 	"functions.h"
 	"validate.h"
 
-1619491773 c:\users\seba\documents\aled\my library\functions.h
+1620086578 c:\users\seba\documents\aled\my library\functions.h
 	"validate.h"
 

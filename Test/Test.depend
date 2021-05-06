@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1619569355 source:c:\users\seba\documents\aled\test\main.c
+1620166717 source:c:\users\seba\documents\aled\test\main.c
 	<stdio.h>
 	<stdlib.h>
+	<ctype.h>
 

@@ -1,77 +1,49 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 // TODO: Caracteres con tilde a-240 e-202 i-241 o-242 u-243
 
-int main() {
-    char flag = 's';
-    float num, cont, acum;
-    num = cont = acum = 0;
+// Realizar un programa que convierta el valor de una velocidad ingresado en km/h a cualquiera de las siguientes unidades de medida: 1: mts/seg, 2:mph, 3:nudos
+int main(int argc, char *argv[]) {
+    int menu = 0;
+    float km = 0;
+    char continua = 's';
 
     do {
-        printf("Ingrese un n\243mero: ");
-        scanf("%f", &num);
-
-        acum += num;
-        cont++;
-
-        printf("Para continuar presione s: ");
-        scanf("%s", &flag);
-
         system("cls");
 
-    } while (flag == 's');
+        printf("Ingrese los km a convertir: ");
+        scanf("%f", &km);
 
-    printf("El promedio es: %.2f", (acum / cont));
+        printf("\n\r---------------------------------------------------------------------");
+        printf("\n\r Conversi\242n de unidades\n");
+        printf("\n\r 1. km/h a m/s.");
+        printf("\n\r 2. km/h a mi/h.");
+        printf("\n\r 3. km/h a nudos.");
+        printf("\n\r---------------------------------------------------------------------");
+
+        printf("\n\r\n\rIngrese opci\242n deseada: ");
+        scanf("%d", &menu);
+
+        switch(menu){
+            case 1:
+                printf("%.2f km/h equivalen a %.2f m/s", km, km * 0.28);
+                break;
+            case 2:
+                printf("%.2f km/h equivalen a %.2f mi/h", km, km * 0.28);
+                break;
+            case 3:
+//                printf("La multiplicacion es %d", num1*num2);
+                break;
+        }
+
+
+        printf("\n\rPresione s para continuar... ");
+        fflush(stdin);
+        scanf("%c", &continua);
+
+    } while(continua == 's');
 
     return 0;
 }
-
-
-
-// Realizar la tabla de multiplicar de un número y que se muestre el resultado del producto entre 1 y un limite
-// int main() {
-
-//     int num = 0, limit = 0;
-
-//     printf("Tablas\n\n");
-
-//     // Sin validacion
-//     // printf("Ingrese un n\243mero y el l\241mite: \n");
-//     // scanf("%d %d", &num, &limit);
-
-//     // Con validacion
-//     do {
-//         printf("Ingrese un n\243mero mayor a cero: ");
-//         scanf("%d", &num);
-//         if (num > 0) {
-//             do {
-//                 printf("Ingrese el l\241mite, debe ser mayor a uno: ");
-//                 scanf("%d", &limit);
-//             } while (limit <= 0);
-//         }
-//     } while(num <= 0);
-
-//     for (int i = 1; i <= limit; i++)
-//         printf("\n%d x %d = %d", num, i, (num * i));
-
-
-//     return 0;
-// }
-
-// 3 Números. 1 Y 2 Son límites. Verificar si el 3 lo está
-// int main() {
-
-//     int num1, num2, num3;
-//     num1 = num2 = num3 = 0;
-
-//     printf("Ingrese 3 n\243meros: \n");
-//     scanf("%d %d %d", &num1, &num2, &num3);
-
-//     if ((num1 <= num3 && num3 <= num2) || (num2 <= num3 && num3 <= num1))
-//         printf("Pertenece al intervalo!");
-//     else
-//         printf  ("NO Pertenece al intervalo!");
-
-//     return 0;
-// }

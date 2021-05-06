@@ -24,27 +24,33 @@ int f_init() {
 
 int f_showMenu() {
 
-    // char buffer[5];
+    char buffer[5];
     int option = 11;
 
-    printf(TITLE);
-    printf(MENU);
+    val_getUnsignedInt(buffer, MENU, MENU_ERROR,10,5);
+    option = atoi(buffer);
+
     while(option != 0) {
         switch(option) {
             case 1:
                 option_1();
+                clearScreen();
                 break;
             case 2:
                 option_2();
+                clearScreen();
                 break;
             case 3:
                 option_3();
+                clearScreen();
                 break;
             case 4:
                 option_4();
+                clearScreen();
                 break;
             case 5:
                 option_5();
+                clearScreen();
                 break;
                  case 6:
                 option_6();
@@ -101,7 +107,7 @@ static void option_9() {
 }
 
 int f_option_1() {
-    printf("Opción 1");
+    printf("Opcion 1");
     return 0;
 }
 
@@ -137,4 +143,8 @@ int f_option_8() {
 
 int f_option_9() {
     return 0;
+}
+
+void clearScreen() {
+    system("cls");
 }
