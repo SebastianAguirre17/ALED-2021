@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1621729105 source:c:\users\seba\documents\aled\notas\main.c
+1621786779 source:c:\users\seba\documents\aled\notas\main.c
 	<stdio.h>
 	<stdlib.h>
+	<conio.h>
 
