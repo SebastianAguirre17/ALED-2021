@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1620781972 source:c:\users\seba\documents\aled\test\main.c
+1621727194 source:c:\users\seba\documents\aled\ordenamiento\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	<conio.h>
 	<ctype.h>
 
