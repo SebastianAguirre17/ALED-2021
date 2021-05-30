@@ -17,13 +17,13 @@
 
 */
 
-#define MAX_INPUT   10
+#define MAX_INPUT   5
 #define R_OK        0
-#define TITLE       "Ejercicio Ingreso de Notas\n"
+#define TITLE       "\tEjercicio Ingreso de Notas\n"
 
 int main() {
-    float notas[MAX_INPUT], aux = 0, max = 0, min = 0, acum = 0;
-    int i;    
+    float   notas[MAX_INPUT], aux = 0, max = 0, min = 0, acum = 0;
+    int     i;    
 
     for (i = 0; i < MAX_INPUT; i++) {
         system("cls");

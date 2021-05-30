@@ -4,7 +4,7 @@
 #include <conio.h>
 #include <ctype.h>
 
-/*
+/*gg
     a - 240
     e - 202
     i - 241
@@ -29,7 +29,7 @@
 int main() {
     char    option = 'a';
     int     numbers[MAX_INPUT], numbersCopy[MAX_INPUT], i, j, aux;
-    int flag = R_ERROR;
+    int     flag = R_ERROR;
 
     for (i = 0; i < MAX_INPUT; i++)
         numbers[i] = numbersCopy[i] = 0;
@@ -48,22 +48,22 @@ int main() {
                 if (flag == R_ERROR)
                     printf ("\255Primero debe ingresar los n\243meros!\n");
                 else {
-                    printf("Ordenamiento Ascendente\n");
+                    printf("\tOrdenamiento Ascendente\n");
 
                     for (i = 0; i < MAX_INPUT; i++)
                         numbersCopy[i] = numbers[i];
 
                     for (i = 0; i < MAX_INPUT; i++) {
                         for (j = 0; j < MAX_INPUT; j++) {
-                            if (numbersCopy[j] > numbersCopy[j + 1]) {
+                            if (numbersCopy[i] < numbersCopy[j]) {
                                 aux = numbersCopy[j];
-                                numbersCopy[j] = numbersCopy[j + 1];
-                                numbersCopy[j + 1] = aux;
+                                numbersCopy[j] = numbersCopy[i];
+                                numbersCopy[i] = aux;
                             }
                         }
                     }
-                    
-                    for (i = 0; i < MAX_INPUT; i++) 
+
+                    for (i = 0; i < MAX_INPUT; i++)
                         printf("\n%d", numbersCopy[i]);
                 }
 
@@ -74,22 +74,22 @@ int main() {
                 if (flag == R_ERROR)
                     printf ("\255Primero debe ingresar los n\243meros!\n");
                 else {
-                    printf("Ordenamiento Descendente\n");
+                    printf("\tOrdenamiento Descendente\n");
 
                     for (i = 0; i < MAX_INPUT; i++)
                         numbersCopy[i] = numbers[i];
 
                     for (i = 0; i < MAX_INPUT; i++) {
                         for (j = 0; j < MAX_INPUT; j++) {
-                            if (numbersCopy[j] < numbersCopy[j + 1]) {
+                            if (numbersCopy[i] > numbersCopy[j]) {
                                 aux = numbersCopy[j];
-                                numbersCopy[j] = numbersCopy[j + 1];
-                                numbersCopy[j + 1] = aux;
+                                numbersCopy[j] = numbersCopy[i];
+                                numbersCopy[i] = aux;
                             }
                         }
                     }
-                    
-                    for (i = 0; i < MAX_INPUT; i++) 
+
+                    for (i = 0; i < MAX_INPUT; i++)
                         printf("\n%d", numbersCopy[i]);
                 }
 
@@ -100,9 +100,9 @@ int main() {
                 if (flag == R_ERROR)
                     printf ("\255Primero debe ingresar los n\243meros!\n");
                 else {
-                    printf("Mostrar como se ingres\242\n");
+                    printf("\tMostrar como se ingres\242\n");
 
-                    for (i = 0; i < MAX_INPUT; i++) 
+                    for (i = 0; i < MAX_INPUT; i++)
                         printf("\n%d", numbers[i]);
                 }
 
@@ -113,9 +113,9 @@ int main() {
                 if (flag == R_ERROR)
                     printf ("\255Primero debe ingresar los n\243meros!\n");
                 else {
-                    printf("Mostrar en orden Inverso\n");
+                    printf("\tMostrar en orden Inverso\n");
 
-                    for (i = MAX_INPUT - 1; i >= 0; i--) 
+                    for (i = MAX_INPUT - 1; i >= 0; i--)
                         printf("\n%d", numbers[i]);
                 }
 
@@ -123,7 +123,7 @@ int main() {
                 break;
             case 'E':
                 system("cls");
-                printf("Seleccion\242 opci\242n %c\n\n", option);
+                printf("Ingreso de n\243meros\n\n");
 
                 for (i = 0; i < MAX_INPUT; i++) {
                     fflush(stdin);
@@ -145,3 +145,4 @@ int main() {
     printf(SALUDO);
     return R_OK;
 }
+
