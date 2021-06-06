@@ -48,7 +48,7 @@ int f_showMenu () {
                 break;
             case 3:
                 f_clearScreen();
-                subOption = f_getInt("Hola");
+                subOption = f_getInt("\n1. Per\241metro del Tri\240ngulo\n2. \265rea del Tri\240ngulo\n3. Volumen de la Pir\240mide\n\n0. Salir\n\nOpcion: ");
                 function_3(subOption);
                 getch();
                 break;
@@ -99,10 +99,23 @@ void function_2(int opt) {
             printf(MENU_ERROR);
             break;
     }
-    
 }
 
 void function_3(int opt) {
-    printf ("\nOPCION: %d", opt);
-    
+    switch (opt) {
+        case 1:
+            f_calculatePerimeterOfTriangle();
+            break;
+        case 2:
+            f_calculateAreaOfTriangle();
+            break;
+        case 3:
+            f_calculateVolumeOfPyramid();
+            break;
+        case 0: 
+            break;
+        default:
+            printf(MENU_ERROR);
+            break;
+    }
 }

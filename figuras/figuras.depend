@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1622942441 source:c:\users\seba\documents\aled\figuras\functions.c
+1623017458 source:c:\users\seba\documents\aled\figuras\functions.c
 	"functions.h"
 
-1622942497 c:\users\seba\documents\aled\figuras\functions.h
+1623017026 c:\users\seba\documents\aled\figuras\functions.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -10,7 +10,7 @@
 	<ctype.h>
 	<math.h>
 
-1622942619 source:c:\users\seba\documents\aled\figuras\main.c
+1623016925 source:c:\users\seba\documents\aled\figuras\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

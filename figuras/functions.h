@@ -21,11 +21,16 @@
 
 #define TITLE               "\tFIGURAS GEOM\220TRICAS\n"
 
-#define MENU                "\n1. Cuadrado\n2. C\241rculo\n3. Tri\240ngulo\n\n0. Salir\n\nOpcion: "
+#define MENU                "\n1. Cuadrado\n2. C\241rculo\n3. Tri\240ngulo (Equil\240tero)\n\n0. Salir\n\nOpcion: "
 
 #define MENU_ERROR          "\n\255La opci\242n ingresada es incorrecta!\n"
 #define MSG_ERROR           "\nError\n"
 
+/**
+ * @brief Muestra un menú de opciones
+ * 
+ * @return int 
+ */
 int f_showMenu();
 
 /**
@@ -38,66 +43,9 @@ void f_clearScreen(void);
  * @brief Solicita un número y devuelve el resultado
  * 
  * @param msg Mensaje a mostrar al usuario
- * @return float Número ingresado por el usuario
- */
-float f_getFloat(char* msg);
-
-/**
- * @brief Solicita un número y devuelve el resultado
- * 
- * @param msg Mensaje a mostrar al usuario
  * @return int Número ingresado por el usuario
  */
 int f_getInt(char* msg);
-
-/**
- * @brief Solicita un caracter y devuelve el resultado
- * 
- * @param msg Mensaje a mostrar al usuario
- * @return char Caracter ingresado por el usuario
- */
-char f_getChar(char* msg);
-
-/**
- * @brief Verifica si el dato es número flotante
- * 
- * @param str Cadena de caracteres a analizar
- * @return int 1 Si es numérico - 0 Si no lo es
- */
-int f_isNumberFloat(char str[]);
-
-/**
- * @brief Verifica si el dato es número
- * 
- * @param str Cadena de caracteres a analizar
- * @return int 1 Si es numérico - 0 Si no lo es
- */
-int f_isNumber(char str[]);
-
-/**
- * @brief Ordena un array con burbujeo
- * 
- * @param arr Array que se desea ordenar
- * @param order "A" Ascendente - "D" Descendente
- * @param length Tamaño del array
- */
-void f_sortArray(int arr[], char order[], int length);
-
-/**
- * @brief Imprimer un array de números
- * 
- * @param arr Array de números a mostrar
- * @param length Tamaño del array
- */
-void f_printArray(int arr[], int length);
-
-/**
- * @brief Imprimer un array de números en orden inverso
- * 
- * @param arr Array de números a mostrar
- * @param length Tamaño del array
- */
-void f_printArrayInverse(int arr[], int length);
 
 /**
  * @brief Solicita un valor y calcula el perímetro de un cuadrado
@@ -134,3 +82,21 @@ void f_calculateAreaOfCircle();
  * 
  */
 void f_calculateVolumeOfSphere();
+
+/**
+ * @brief Solicita datos y calcula el perímetro de un triángulo
+ * 
+ */
+void f_calculatePerimeterOfTriangle();
+
+/**
+ * @brief Solicita datos y calcula el área de un triángulo
+ * 
+ */
+void f_calculateAreaOfTriangle();
+
+/**
+ * @brief Solicita datos y calcula el volumen de una pirámide
+ * 
+ */
+void f_calculateVolumeOfPyramid();
