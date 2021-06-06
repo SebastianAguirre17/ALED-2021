@@ -27,10 +27,7 @@ int main() {
 
     for (i = 0; i < MAX_INPUT; i++) {
         system("cls");
-        printf(TITLE);    
-        fflush(stdin);
-        printf("\nIngrese la nota n\243mero %d: ", i + 1);
-        scanf("%f", &aux);
+        
 
         if (aux < 0 || aux > 10) {
             printf("\n\255ERROR! Ingrese un valor entre 0 y 10\n");

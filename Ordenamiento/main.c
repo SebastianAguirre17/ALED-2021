@@ -26,99 +26,54 @@
 #define MAX_INPUT       5
 #define R_ERROR         -1
 
+char showMenuAndReturnOption();
+void orderAscendent(int arr[], int limit);
+void orderDescendent(int arr[], int limit);
+void showArr(int arr[], int limit);
+void showInvertOrder(int arr[], int limit);
+void copyArr(int arrA[], int arrB[], int limit);
+
 int main() {
     char    option = 'a';
-    int     numbers[MAX_INPUT], numbersCopy[MAX_INPUT], i, j, aux;
+    int     numbers[MAX_INPUT], numbersCopy[MAX_INPUT], i;
     int     flag = R_ERROR;
 
     for (i = 0; i < MAX_INPUT; i++)
         numbers[i] = numbersCopy[i] = 0;
 
     do {
-        system("cls");
-        printf(TITLE);
-        printf(MENU);
-        fflush(stdin);
-        scanf("%c", &option);
-        option = toupper(option);
+        system("CLS");
+        option = showMenuAndReturnOption();
 
         switch (option) {
             case 'A':
-                system("cls");
                 if (flag == R_ERROR)
-                    printf ("\255Primero debe ingresar los n\243meros!\n");
-                else {
-                    printf("\tOrdenamiento Ascendente\n");
-
-                    for (i = 0; i < MAX_INPUT; i++)
-                        numbersCopy[i] = numbers[i];
-
-                    for (i = 0; i < MAX_INPUT; i++) {
-                        for (j = 0; j < MAX_INPUT; j++) {
-                            if (numbersCopy[i] < numbersCopy[j]) {
-                                aux = numbersCopy[j];
-                                numbersCopy[j] = numbersCopy[i];
-                                numbersCopy[i] = aux;
-                            }
-                        }
-                    }
-
-                    for (i = 0; i < MAX_INPUT; i++)
-                        printf("\n%d", numbersCopy[i]);
-                }
-
+                    printf ("\n\255Primero debe ingresar los n\243meros!\n");
+                else 
+                    orderAscendent(numbersCopy, MAX_INPUT);
                 getch();
                 break;
             case 'B':
-                system("cls");
                 if (flag == R_ERROR)
-                    printf ("\255Primero debe ingresar los n\243meros!\n");
-                else {
-                    printf("\tOrdenamiento Descendente\n");
-
-                    for (i = 0; i < MAX_INPUT; i++)
-                        numbersCopy[i] = numbers[i];
-
-                    for (i = 0; i < MAX_INPUT; i++) {
-                        for (j = 0; j < MAX_INPUT; j++) {
-                            if (numbersCopy[i] > numbersCopy[j]) {
-                                aux = numbersCopy[j];
-                                numbersCopy[j] = numbersCopy[i];
-                                numbersCopy[i] = aux;
-                            }
-                        }
-                    }
-
-                    for (i = 0; i < MAX_INPUT; i++)
-                        printf("\n%d", numbersCopy[i]);
-                }
-
+                    printf ("\n\255Primero debe ingresar los n\243meros!\n");
+                else 
+                    orderDescendent(numbersCopy, MAX_INPUT);
                 getch();
                 break;
             case 'C':
                 system("cls");
                 if (flag == R_ERROR)
                     printf ("\255Primero debe ingresar los n\243meros!\n");
-                else {
-                    printf("\tMostrar como se ingres\242\n");
-
-                    for (i = 0; i < MAX_INPUT; i++)
-                        printf("\n%d", numbers[i]);
-                }
-
+                else 
+                    showArr(numbers, MAX_INPUT);
                 getch();
                 break;
             case 'D':
                 system("cls");
                 if (flag == R_ERROR)
                     printf ("\255Primero debe ingresar los n\243meros!\n");
-                else {
-                    printf("\tMostrar en orden Inverso\n");
-
-                    for (i = MAX_INPUT - 1; i >= 0; i--)
-                        printf("\n%d", numbers[i]);
-                }
-
+                else 
+                    showInvertOrder(numbers, MAX_INPUT);
                 getch();
                 break;
             case 'E':
@@ -130,6 +85,8 @@ int main() {
                     printf("Ingrese un n\243mero: ");
                     scanf("%d", &numbers[i]);
                 }
+
+                copyArr(numbers, numbersCopy, MAX_INPUT);
 
                 flag = R_OK;
                 break;
@@ -146,3 +103,72 @@ int main() {
     return R_OK;
 }
 
+void orderAscendent (int arr[], int limit) {
+    int i, j, aux;
+
+    system("cls");
+    printf("\tOrdenamiento Ascendente\n");
+
+    for (i = 0; i < limit; i++) {
+        for (j = 0; j < limit; j++) {
+            if (arr[i] < arr[j]) {
+                aux = arr[j];
+                arr[j] = arr[i];
+                arr[i] = aux;
+            }
+        }
+    }
+
+    for (i = 0; i < limit; i++)
+        printf("\n%d", arr[i]);
+}
+
+void orderDescendent(int arr[], int limit) {
+    int i, j, aux;
+
+    system("cls");
+    printf("\tOrdenamiento Descendente\n");
+
+    for (i = 0; i < MAX_INPUT; i++) {
+        for (j = 0; j < MAX_INPUT; j++) {
+            if (arr[i] > arr[j]) {
+                aux = arr[j];
+                arr[j] = arr[i];
+                arr[i] = aux;
+            }
+        }
+    }
+
+    for (i = 0; i < MAX_INPUT; i++)
+        printf("\n%d", arr[i]);
+}
+
+void showArr(int arr[], int limit) {
+    printf("\tMostrar como se ingres\242\n");
+
+    for (int i = 0; i < limit; i++)
+        printf("\n%d", arr[i]);
+}
+
+void showInvertOrder(int arr[], int limit) {
+    printf("\tMostrar en orden Inverso\n");
+
+    for (int i = limit - 1; i >= 0; i--)
+        printf("\n%d", arr[i]);
+}
+
+char showMenuAndReturnOption() {
+    char option; 
+
+    printf(TITLE);
+    printf(MENU);
+    fflush(stdin);
+    scanf("%c", &option);
+    
+    return toupper(option);
+}
+
+void copyArr(int arrA[], int arrB[], int limit) {
+    for (int i = 0; i < limit; i++)
+        arrB[i] = arrA[i];
+}
