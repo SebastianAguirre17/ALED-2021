@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1623026289 source:c:\users\seba\documents\aled\template\main.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+
+1623027740 c:\users\seba\documents\aled\template\functions.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+	<math.h>
+
+1623027843 source:c:\users\seba\documents\aled\template\functions.c
+	"functions.h"
+

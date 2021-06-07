@@ -18,11 +18,15 @@
 #define FALSE               0
 #define R_OK                0
 #define R_ERROR             -1
+#define EXIT_OPTION         3
+
+#define TITLE               "\tT\326TULO"
+#define MENU                "\tMEN\351"
 
 #define MENU_ERROR          "\n\255La opci\242n ingresada es incorrecta!\n"
 #define MSG_ERROR           "\nError\n"
 
-int f_showMenu(void);
+
 
 /**
  * @brief Limpia la pantalla
@@ -94,3 +98,41 @@ void f_printArray(int arr[], int length);
  * @param length Tamaño del array
  */
 void f_printArrayInverse(int arr[], int length);
+
+/* NUEVAS FUNCIONES CON PUNTEROS */
+
+/**
+ * @brief Muestra un mensaje, solicita un número y lo guarda en la variable asignada
+ * 
+ * @param pResultado Dirección de memoria donde se va a gusrdar el dato ingresado
+ * @param mensaje Mensaje a mostrar al usuario
+ * @param mensajeError Mensaje a mostrar en caso de error
+ * @param minimo Mínimo valor aceptado
+ * @param maximo Máximo valor aceptado
+ * @param reintentos Cantidad de iteraciones posibles
+ */
+int f_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+
+/**
+ * @brief Muestra un mensaje, solicita un número flotante y lo guarda en la variable asignada
+ * 
+ * @param pResultado Dirección de memoria donde se va a gusrdar el dato ingresado
+ * @param mensaje Mensaje a mostrar al usuario
+ * @param mensajeError Mensaje a mostrar en caso de error
+ * @param minimo Mínimo valor aceptado
+ * @param maximo Máximo valor aceptado
+ * @param reintentos Cantidad de iteraciones posibles
+ */
+int f_getNumeroFlotante(float* pResultado, char* mensaje, char* mensajeError, float minimo, float maximo, float reintentos);
+
+/**
+ * @brief Muestra un mensaje, solicita un caracter y lo guarda en la variable asignada
+ * 
+ * @param pResultado Dirección de memoria donde se va a gusrdar el dato ingresado
+ * @param mensaje Mensaje a mostrar al usuario
+ * @param mensajeError Mensaje a mostrar en caso de error
+ * @param minimo Mínimo valor aceptado
+ * @param maximo Máximo valor aceptado
+ * @param reintentos Cantidad de iteraciones posibles
+ */
+int f_getCaracter(char* pResultado, char* mensaje, char* mensajeError, char minimo, char maximo, char reintentos);
